@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogWorld | Generador de perros</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">🐶 DogWorld</a>
+        <nav>
+            <a href="#explorador">Explorar</a>
+            <a href="#favoritos">Mis favoritos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="etiqueta">🐾 UN MUNDO LLENO DE AMIGOS</p>
+            <h1>Encontrá a tu próximo<br><span>perro favorito.</span></h1>
+            <p>Descubrí razas increíbles y guardá las fotos que más te gusten.</p>
+            <a href="#explorador" class="boton boton-principal">Explorar perros ↓</a>
+        </section>
+
+        <section id="explorador" class="seccion">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">DESCUBRÍ</p>
+                    <h2>Generador de perros</h2>
+                    <p class="subtitulo">Cada imagen es una nueva sorpresa.</p>
+                </div>
+            </div>
+
+            <div class="buscador">
+                <label for="raza">Buscar por raza</label>
+                <div class="controles">
+                    <select id="raza">
+                        <option value="all">Todas las razas</option>
+                    </select>
+                    <button id="btnBuscar" class="boton boton-principal">
+                        Buscar raza
+                    </button>
+                </div>
+            </div>
+
+            <div class="perro-principal">
+                <div class="imagen-contenedor">
+                    <div id="cargando" class="cargando">🐾 Cargando perrito...</div>
+                    <img id="imagenPerro" src="" alt="Perro aleatorio" class="oculto">
+                </div>
+
+                <div class="datos-perro">
+                    <span id="etiquetaRaza" class="etiqueta-raza">SORPRESA PERRUNA</span>
+                    <h3 id="nombreRaza">¡Un nuevo amigo!</h3>
+                    <p id="descripcionRaza">Descubrí qué perro aparecerá esta vez.</p>
+
+                    <div class="acciones">
+                        <button id="btnNuevo" class="boton boton-principal">
+                            🔄 Otro perro
+                        </button>
+                        <button id="btnFavorito" class="boton boton-favorito">
+                            ♡ Agregar a favoritos
+                        </button>
+                    </div>
+                    <p id="mensaje" class="mensaje" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="favoritos" class="seccion favoritos-seccion">
+            <div class="titulo-seccion">
+                <div>
+                    <p class="etiqueta">TU COLECCIÓN</p>
+                    <h2>Mis favoritos <span>♥</span></h2>
+                    <p class="subtitulo">Tus perritos guardados en un solo lugar.</p>
+                </div>
+                <span id="contadorFavoritos" class="contador">0 perros</span>
+            </div>
+
+            <div id="galeriaFavoritos" class="galeria">
+                <div class="vacio">
+                    <div>🐕</div>
+                    <h3>Todavía no tenés favoritos</h3>
+                    <p>Cuando encuentres un perro que te guste, guardalo con el botón de favoritos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🐾 DogWorld © 2026</p>
+        <p>Imágenes proporcionadas por Dog CEO API</p>
+    </footer>
+</body>
+</html>
